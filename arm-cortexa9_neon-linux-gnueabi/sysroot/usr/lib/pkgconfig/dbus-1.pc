@@ -1,0 +1,17 @@
+prefix=/opt/toolchain/arm-cortexa9_neon-linux-gnueabi/sysroot/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+system_bus_default_address=unix:path=/var/run/dbus/system_bus_socket
+sysconfdir=/opt/toolchain/arm-cortexa9_neon-linux-gnueabi/sysroot/usr/etc
+session_bus_services_dir=/opt/toolchain/arm-cortexa9_neon-linux-gnueabi/sysroot/usr/share/dbus-1/services
+system_bus_services_dir=/opt/toolchain/arm-cortexa9_neon-linux-gnueabi/sysroot/usr/share/dbus-1/system-services
+interfaces_dir=/opt/toolchain/arm-cortexa9_neon-linux-gnueabi/sysroot/usr/share/dbus-1/interfaces
+daemondir=/opt/toolchain/arm-cortexa9_neon-linux-gnueabi/sysroot/usr/bin
+
+Name: dbus
+Description: Free desktop message bus
+Version: 1.6.30
+Libs: -L${libdir} -ldbus-1
+Libs.private: -lpthread -lrt 
+Cflags: -I${includedir}/dbus-1.0 -I${libdir}/dbus-1.0/include 
