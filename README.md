@@ -9,3 +9,4 @@ GDB 7.8.2 <br />
 expat 2.0.1 <br />
 dbus 1.6.30 <br />
 boost 1.57 headers <br />
+libusb 1.0.9 <br />
